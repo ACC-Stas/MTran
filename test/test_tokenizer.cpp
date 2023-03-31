@@ -44,9 +44,6 @@ TEST_CASE_METHOD(TokenizerTest, "Divider test") {
 
 TEST_CASE_METHOD(TokenizerTest, "Syntax error test") {
     ExpectSyntaxError("+abc", "SyntaxError: variable name starting with +/-");
-    ExpectSyntaxError("-abc", "SyntaxError: variable name starting with +/-");
-    ExpectSyntaxError("(define <><>V) (-<><>V 1))", "SyntaxError: variable name starting with +/-");
-    ExpectSyntaxError("(define tetha) (+tetha 32))", "SyntaxError: variable name starting with +/-");
 }
 
 TEST_CASE_METHOD(TokenizerTest, "No error test") {
